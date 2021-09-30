@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "UFF-8">
+		<meta name="Helton Neves Loureiro" content="Turma 2 CAW" >
+		<title>Calculadora HTML Helton V 1.0</title>
+	</head>
+
+	<style>
+		body
+		{
+			padding: 0;
+    		margin: 0;
+			background-image:  url('matematica.jpg');
+			background-size: 100%;
+			text-align: center;
+			color: white;
+			text-shadow: 5px 10px 15px rgb(62, 198, 207);
+			font-size: 36px;
+		}
+		.visor, .botao, .botao:hover
+		{
+			opacity: 70%;
+		}
+		td
+		{
+			padding-bottom: 20px;
+			text-align: center;	
+		}
+		
+		.visor
+		{
+			border-radius: 10px;
+			width: 320px;
+			height: 50px;
+			font-size: 28px;
+			font-weight: bold;
+		}
+			
+		.botao
+		{
+			cursor: pointer;
+			border-radius: 10px;
+			height: 60px;
+			width: 60px;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		
+		.botao:hover
+		{
+			background-color: grey;
+		}
+
+		form
+		{
+		background: rgba(255, 255, 255, 0.3);
+		width: 25%;
+		margin: auto;
+		border-radius: 10px;
+		border: 8px solid rgb(106, 156, 154);
+		padding: 20px;
+		}
+
+	</style>
+	
+	<body>
+	<h1 style="margin-top: 0;">Calculadora Helton<a style="font-size: 15px;">   V 1.0</a></h1>
+
+		<form name="Calculadora">
+			<table>  <!--border=60-->
+				<tr>
+					<td >
+						<input class ="visor" type="text"  name="entrada">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" button class="botao" value="1" onClick="Calculadora.entrada.value += '1'">
+						<input type="button" button class="botao" value="2" onClick="Calculadora.entrada.value += '2'">
+						<input type="button" button class="botao" value="3" onClick="Calculadora.entrada.value += '3'">
+						<input type="button" button class="botao" value="+" onClick="Calculadora.entrada.value += '+'">
+						<br>
+
+						<input type="button" button class="botao" value="4" onClick="Calculadora.entrada.value += '4'">
+						<input type="button" button class="botao" value="5" onClick="Calculadora.entrada.value += '5'">
+						<input type="button" button class="botao" value="6" onClick="Calculadora.entrada.value += '6'">
+						<input type="button" button class="botao" value="-" onClick="Calculadora.entrada.value += '-'">
+						<br>
+
+						<input type="button" button class="botao" value="7" onClick="Calculadora.entrada.value += '7'">
+						<input type="button" button class="botao" value="8" onClick="Calculadora.entrada.value += '8'">
+						<input type="button" button class="botao" value="9" onClick="Calculadora.entrada.value += '9'">
+						<input type="button" button class="botao" value="X" onClick="Calculadora.entrada.value += ' * '">
+						<br>
+
+						<input type="reset" button class="botao" value="C">
+						<input type="button" button class="botao" value="0" onClick="Calculadora.entrada.value += '0'">
+						<input type="button" button class="botao"value="=" onClick="Calculadora.entrada.value = eval(Calculadora.entrada.value)">
+						<input type="button" button class="botao"value="/" onClick="Calculadora.entrada.value += ' / '">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
